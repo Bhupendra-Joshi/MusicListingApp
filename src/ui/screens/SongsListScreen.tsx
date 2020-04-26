@@ -41,11 +41,10 @@ const SongsListScreen = (props) => {
             }
         })
     }
-    console.log(isLoading);
     return (
         <View style={styles.container}>
             {
-                isLoading
+                (isLoading && !isRefreshing)
                     ? <ActivityIndicator
                         size={'large'}
                     />
